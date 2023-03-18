@@ -1,0 +1,66 @@
+/*** New section ***/
+p {
+    line-height: 1.5rem;
+}
+
+.new {
+    display: block;
+}
+
+.new-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.new-layout {
+    color: #fff;
+    border-radius: 10px;
+}
+
+.new-header {
+    padding: 20px 30px;
+    background-color: chartreuse;
+    border: 2px solid darkgreen;
+    border-radius: 10px;
+}
+
+.new-main {
+    display: flex;
+    flex-direction: row;
+}
+
+.new-article {
+    flex-basis: 50%;
+    background-color: darkgreen;
+    border: 2px solid chartreuse;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.new-aside {
+    flex-basis: 50%;
+    background-color: black;
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.new-footer {
+    padding: 20px 30px;
+    background-color: chartreuse;
+    border: 2px solid darkgreen;
+    border-radius: 10px;
+}
+
+/* The following will show the contents inside the new-main class as vertically stacked */
+@media screen and (max-width: 500px) {
+    .new-main {
+        flex-direction: column; /*without this it won't work*/
+        flex-wrap: nowrap;
+    }
+
+    .new-article, .new-aside {
+        flex-basis: 100%;
+    }
+}
